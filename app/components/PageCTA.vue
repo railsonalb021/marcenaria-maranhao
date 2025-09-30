@@ -54,9 +54,17 @@ const links = [
       title="Entre em contato">
     <template #body>
       <div class="flex flex-col justify-center items-center space-y-7 mb-10">
-        <Input id="aaaa" placeholder="Nome" class="text-white" label="Nome" />
-        <Input id="aaaa" placeholder="Telefone" class="text-white" label="Telefone" />
-        <Input id="aaaa" placeholder="E-mail" class="text-white" label="E-mail" />
+            <Input id="aaaa" placeholder="Nome" class="text-white" label="Nome" />
+            <Input id="aaaa" placeholder="E-mail" class="text-white" label="E-mail" />
+            <Input id="aaaa" placeholder="Telefone" class="text-white" label="Telefone" />
+            <UButton
+            class="cursor-pointer w-40 flex text-center justify-center"
+            type="submit"
+            color="neutral"
+            variant="subtle"
+            trailing-icon="i-lucide-arrow-right">
+            Enviar
+          </UButton>
       </div>
     </template>
   </UModal>

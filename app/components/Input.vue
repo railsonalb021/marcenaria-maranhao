@@ -13,6 +13,6 @@ const model = defineModel<string>()
     <div>
         <label :for="id" class="block pb-3 text-sm font-medium text-black">
         {{ label }}</label>
-        <UInput :ui="{base: 'text-white placeholder:text-white focus:ring-0 focus:outline-none'}"  class="w-60" :id="id" :placeholder="placeholder" v-model="model" />
+        <UInput :ui="{base: 'text-white bg-slate-800 placeholder:text-white focus:ring-0 focus:outline-none'}"  class="w-60" :id="id" :placeholder="placeholder" v-model="model" />
     </div>
 </template>
