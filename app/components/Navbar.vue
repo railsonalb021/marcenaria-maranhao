@@ -14,15 +14,21 @@
                 </NuxtLink>
             </div>
             <div class="space-x-2">
+                <UTooltip text="Voltar ao início">
                 <NuxtLink to="/" class="text-black cursor-pointer">
                     <Icon name="mdi:home-outline" class="text-3xl text-black hover:text-gray-600 cursor-pointer" />
                 </NuxtLink>
+                </UTooltip>
+                <UTooltip text="Página do Instagram">
                 <NuxtLink target="_blank" to="https://www.instagram.com/rai.marcenariamaranhao/" class="text-black cursor-pointer">
                     <Icon name="mdi:instagram" class="text-3xl hover:text-gray-600 text-black cursor-pointer" />
                 </NuxtLink>
+                </UTooltip>
+                <UTooltip text="Contato do WhatsApp">
                 <NuxtLink target="_blank" to="https://wa.me/5521995890706" class="text-black cursor-pointer">
                     <Icon name="mdi:whatsapp" class="text-3xl hover:text-gray-600 text-black cursor-pointer" />
                 </NuxtLink>
+                </UTooltip>
             </div>
         </div>
     </nav>
