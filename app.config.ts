@@ -1,10 +1,5 @@
 export default defineAppConfig({
   ui: {
-    input: {
-      slots: {
-        base: ['placeholder:text-white focus:ring-0 focus:outline-none'],
-      },
-    },
     slideover: {
       slots: {
         overlay: 'fixed inset-0 bg-elevated/75',

@@ -1,25 +1,5 @@
 <script setup lang="ts">
-import type { ToastProps } from '@nuxt/ui';
-import type { ContactForm } from '~/shared/utils/form.schema';
-
-const props = defineProps<{
-  color: ToastProps['color']
-  title: string
-  description: string
-  icon: string
-}>()
-
 const toast = useToast()
-
-function showtoast(){
-  toast.add({
-    title: 'Obrigado pelo contato!',
-    description: 'Em breve entraremos em contato.',
-    icon: 'i-lucide-check-circle',
-    color: props.color || 'neutral',
-  })
-}
-
 const isOpen = ref(false)
 
 const links = [
@@ -35,6 +15,15 @@ const state = ref<ContactForm>({
   email: '',
   telefone: '',
 })
+
+function showtoast(){
+  toast.add({
+    title: 'Obrigado pelo contato!',
+    description: 'Em breve entraremos em contato.',
+    icon: 'i-lucide-check-circle',
+    color: 'neutral',
+  })
+}
 </script>
 
 <template>
@@ -56,12 +45,14 @@ const state = ref<ContactForm>({
 
     <template #links>
       <UButton
+        class="bg-transparent text-black py-2 px-6 hover:bg-slate-800 hover:text-white cursor-pointer transition-all duration-300 ease-in-out"
         label="Faça seu orçamento"
         color="neutral"
         variant="subtle"
         trailing-icon="i-lucide-arrow-right"
       />
       <UButton
+        class="py-2 px-6 cursor-pointer transition-all duration-300 ease-in-out"
         label="Entre em contato"
         color="neutral"
         variant="subtle"
@@ -81,18 +72,24 @@ const state = ref<ContactForm>({
       title="Entre em contato">
     <template #body>
       <div class="flex flex-col justify-center items-center space-y-7 mb-10">
-            <Input id="aaaa" v-model="state.name" placeholder="Nome" class="text-white" label="Nome" />
-            <Input id="aaaa" v-model="state.email" placeholder="E-mail" class="text-white" label="E-mail" />
-            <Input id="aaaa" v-model="state.telefone" placeholder="Telefone" class="text-white" label="Telefone" />
-            <UButton
-            class="cursor-pointer w-40 flex text-center justify-center"
-            type="submit"
-            color="neutral"
-            variant="subtle"
-            trailing-icon="i-lucide-arrow-right"
-            @click="showtoast()">
-            Enviar
-          </UButton>
+            <UFormField label="Nome">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.nome" />
+            </UFormField>
+            <UFormField label="Email">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.email" />
+            </UFormField>
+            <UFormField label="Telefone">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.telefone" />
+            </UFormField>
+            <UButton 
+              class="cursor-pointer w-96 flex text-center justify-center"
+              type="submit"
+              color="neutral"
+              variant="subtle"
+              trailing-icon="i-lucide-arrow-right"
+              @click="showtoast">
+              Enviar
+            </UButton>
       </div>
     </template>
   </UModal>
