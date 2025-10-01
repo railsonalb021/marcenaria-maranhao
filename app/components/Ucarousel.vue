@@ -17,7 +17,7 @@ const items = [
     arrows
     auto-scroll
     :items="items"
-    :ui="{item: 'flex-none w-[300px]' }"
+    :ui="{item: 'basis-1/4' }"
   >
     <img :src="item" class="rounded-lg">
   </UCarousel>
