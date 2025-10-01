@@ -72,14 +72,14 @@ function showtoast(){
       title="Entre em contato">
     <template #body>
       <div class="flex flex-col justify-center items-center space-y-7 mb-10">
-            <UFormField label="Nome">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.nome" />
+            <UFormField :ui="{ label: 'text-black' }" label="Nome">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Nome" v-model="state.nome" />
             </UFormField>
-            <UFormField label="Email">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.email" />
+            <UFormField :ui="{ label: 'text-black' }" label="Email">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Email" v-model="state.email" />
             </UFormField>
-            <UFormField label="Telefone">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800 focus:ring-0 focus:outline-none'}"  class="w-96" placeholder="placeholder" v-model="state.telefone" />
+            <UFormField :ui="{ label: 'text-black' }" label="Telefone">
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Telefone" v-model="state.telefone" />
             </UFormField>
             <UButton 
               class="cursor-pointer w-96 flex text-center justify-center"

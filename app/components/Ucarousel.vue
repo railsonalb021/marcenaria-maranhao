@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const items = [
-  'https://picsum.photos/468/468?random=1',
-  'https://picsum.photos/468/468?random=2',
-  'https://picsum.photos/468/468?random=3',
-  'https://picsum.photos/468/468?random=4',
-  'https://picsum.photos/468/468?random=5',
-  'https://picsum.photos/468/468?random=6'
+  '/card1.jpeg',
+  '/card2.jpeg',
+  '/card3.jpeg',
+  '/card4.jpeg',
+  '/card5.jpeg',
+  '/card6.jpeg',
 ]
 </script>
 
@@ -17,9 +17,9 @@ const items = [
     arrows
     auto-scroll
     :items="items"
-    :ui="{ item: 'basis-1/4' }"
+    :ui="{item: 'flex-none w-[300px]' }"
   >
-    <img :src="item" width="234" height="234" class="rounded-lg">
+    <img :src="item" class="rounded-lg">
   </UCarousel>
 </template>
 
