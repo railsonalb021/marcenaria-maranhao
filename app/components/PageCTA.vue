@@ -67,29 +67,46 @@ function showtoast(){
       color: 'neutral',
       variant: 'subtle',
       class: 'bg-transparent text-black ease-out transition-all duration-300 hover:bg-gray-100'}" 
-      class="bg-white" 
+      class="bg-white max-w-3xl max-h-96" 
       v-model:open="isOpen" 
       title="Entre em contato">
     <template #body>
       <div class="flex flex-col justify-center items-center space-y-7 mb-10">
+        <div class="grid grid-cols-3 gap-x-64 space-y-5 px-10">
+          <div class="col-span-3 mb-5 text-center">
+            <h1 class="text-2xl text-black font-bold">Dados Pessoais</h1>
+          </div>
+          <div class="col-span-1">
             <UFormField :ui="{ label: 'text-black' }" label="Nome">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Nome" v-model="state.nome" />
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-72" placeholder="Nome" v-model="state.nome" />
             </UFormField>
+          </div>
+          <div class="col-span-1">
             <UFormField :ui="{ label: 'text-black' }" label="Email">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Email" v-model="state.email" />
+              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-72" placeholder="Email" v-model="state.email" />
             </UFormField>
-            <UFormField :ui="{ label: 'text-black' }" label="Telefone">
-              <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-96" placeholder="Telefone" v-model="state.telefone" />
-            </UFormField>
-            <UButton 
-              class="cursor-pointer w-96 flex text-center justify-center"
-              type="submit"
-              color="neutral"
-              variant="subtle"
-              trailing-icon="i-lucide-arrow-right"
-              @click="showtoast">
-              Enviar
-            </UButton>
+          </div>
+            <div class="flex col-span-3 gap-x-3">
+              <UFormField :ui="{ label: 'text-black' }" label="Telefone">
+                <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-72" placeholder="Telefone" v-model="state.telefone" />
+              </UFormField>
+
+              <UFormField :ui="{ label: 'text-black' }" label="Telefone">
+                <UInput :ui="{base: 'text-white bg-white placeholder:text-slate-800'}"  class="w-72" placeholder="Telefone" v-model="state.telefone" />
+              </UFormField>
+            </div>
+        </div>
+            <div>
+              <UButton 
+                class="cursor-pointer w-96 flex text-center justify-center"
+                type="submit"
+                color="neutral"
+                variant="subtle"
+                trailing-icon="i-lucide-arrow-right"
+                @click="showtoast">
+                Enviar
+              </UButton>
+            </div>
       </div>
     </template>
   </UModal>
