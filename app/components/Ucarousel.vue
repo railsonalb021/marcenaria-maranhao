@@ -1,15 +1,14 @@
 <script setup lang="ts">
 const items = [
-  '/card1.jpeg',
   '/card2.jpeg',
   '/card3.jpeg',
   '/card4.jpeg',
   '/card5.jpeg',
-  '/card6.jpeg',
 ]
 </script>
 
 <template>
+  <div class="px-40">
   <UCarousel
     v-slot="{ item }"
     loop
@@ -21,5 +20,6 @@ const items = [
   >
     <img :src="item" class="rounded-lg">
   </UCarousel>
+  </div>
 </template>
 

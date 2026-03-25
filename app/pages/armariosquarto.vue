@@ -8,7 +8,7 @@ const allCards = Array.from({ length: totalImages }, (_, i) => {
   const index = i + 1
 
   return {
-    img: `/armariosdecozinha/armariodecozinha${index}.${index <= 100 ? 'png' : 'jpg'}`
+    img: `/armariosdequarto/armariodequarto${index}.${index <= 50 ? 'png' : 'jpg'}`
   }
 })
 
@@ -26,7 +26,7 @@ const paginatedCards = computed(() => {
   </div>
   <div class="flex justify-center items-center">
     <h1 class="text-3xl sm:text-4xl text-center pt-24 sm:pt-28 md:pt-32 lg:pt-10 text-black px-4">
-      Armários de Cozinha
+      Armários de Quarto
     </h1>
   </div>
 
@@ -42,7 +42,7 @@ const paginatedCards = computed(() => {
           <div class="w-full aspect-square overflow-hidden rounded-lg">
             <img
               :src="card.img"
-              :alt="`Armário de cozinha ${index + 1}`"
+              :alt="`Armário de quarto ${index + 1}`"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
