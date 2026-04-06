@@ -13,7 +13,7 @@ watch(() => route.fullPath, () => {
     side="left"
     title="Catalógo de Móveis"
     :ui="{
-      content: 'fixed bg-white flex flex-col focus:outline-none',
+      content: 'fixed bg-white flex flex-col rounded-lg',
       title: 'font-sans font-normal text-black'
     }"
     :close="{
@@ -56,7 +56,13 @@ watch(() => route.fullPath, () => {
               <li class="pb-2 hover:text-black ease-out transition-all duration-300 cursor-pointer">Portas de correr</li>
               <Icon name="i-lucide-chevron-right" class="inline-block ml-2 mt-1" />
           </ul>
+
+          <div class="flex items-center">
+            <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Painéis</h2>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
         </div>
+
       <Placeholder class="h-full" />
     </template>
   </USlideover>
