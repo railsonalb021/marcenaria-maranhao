@@ -47,18 +47,24 @@ watch(() => route.fullPath, () => {
             </ul>
           </NuxtLink>
 
-          <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Portas</h2>
-          <ul class="pl-5 flex text-gray-500 text-xl">
-              <li class="pb-2 hover:text-black ease-out transition-all duration-300 cursor-pointer">Portas de veneziana</li>
-              <Icon name="i-lucide-chevron-right" class="inline-block ml-2 mt-1" />
-          </ul>
-          <ul class="pl-5 flex text-gray-500 text-xl">
-              <li class="pb-2 hover:text-black ease-out transition-all duration-300 cursor-pointer">Portas de correr</li>
-              <Icon name="i-lucide-chevron-right" class="inline-block ml-2 mt-1" />
-          </ul>
+          <div class="flex items-center">
+            <NuxtLink to="/portas">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Portas</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
 
           <div class="flex items-center">
-            <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Painéis</h2>
+            <NuxtLink to="/paineis">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Painéis</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
+            <NuxtLink to="/racks">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Racks de sala</h2>
+              </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
         </div>
