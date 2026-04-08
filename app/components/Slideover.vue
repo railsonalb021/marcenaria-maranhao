@@ -62,6 +62,13 @@ watch(() => route.fullPath, () => {
           </div>
 
           <div class="flex items-center">
+            <NuxtLink to="/mesas">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Mesas</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
             <NuxtLink to="/racks">
               <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Racks de sala</h2>
               </NuxtLink>
