@@ -56,7 +56,7 @@ const paginatedCards = computed(() => {
     <UPagination 
       class="cursor-pointer"
       active-color="neutral"
-      :total="80"
+      :total="120"
       v-model:page="page"
       :page-count="perPage"
       :max="5" 
