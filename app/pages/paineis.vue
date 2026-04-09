@@ -16,10 +16,23 @@ const paginatedCards = computed(() => {
   const start = (page.value - 1) * perPage
   return allCards.slice(start, start + perPage)
 })
+
+const selectedImage = ref<string | undefined>(undefined)
+const isOpen = ref(false)
+
+function openImage(img: string) {
+  selectedImage.value = img
+  isOpen.value = true
+}
+
+function closeImage() {
+  isOpen.value = false
+  selectedImage.value = undefined
+}
 </script>
 
 <template>
-  <div class="flex justify-start items-center px-16 pt-10">
+  <div class="flex justify-start items-center px-7 lg:px-16 pt-10">
     <NuxtLink to="/" class="text-black cursor-pointer absolute">
       <Icon name="mdi:arrow-left" class="text-2xl sm:text-3xl text-black transition-colors" />
     </NuxtLink>
@@ -45,6 +58,7 @@ const paginatedCards = computed(() => {
               :alt="`Paineis ${index + 1}`"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               loading="lazy"
+              @click="openImage(card.img)"
             />
           </div>
         </template>
@@ -62,4 +76,16 @@ const paginatedCards = computed(() => {
       :max="5" 
     />
   </div>
+
+  <div
+  v-if="isOpen"
+  class="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4"
+  @click="closeImage"
+>
+  <img
+    :src="selectedImage"
+    class="max-w-full max-h-full rounded-lg"
+    @click.stop
+  />
+</div>
 </template>

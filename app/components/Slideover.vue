@@ -49,28 +49,49 @@ watch(() => route.fullPath, () => {
 
           <div class="flex items-center">
             <NuxtLink to="/portas">
-              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Portas</h2>
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Portas</h2>
               </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
 
           <div class="flex items-center">
             <NuxtLink to="/paineis">
-              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Painéis</h2>
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Painéis</h2>
               </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
 
           <div class="flex items-center">
             <NuxtLink to="/mesas">
-              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Mesas</h2>
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Mesas</h2>
               </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
 
           <div class="flex items-center">
             <NuxtLink to="/racks">
-              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black">Racks de sala</h2>
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Racks de sala</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
+            <NuxtLink to="/camas">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Camas e Cabeceiras</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
+            <NuxtLink to="/comodas">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Cômodas</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+          
+          <div class="flex items-center">
+            <NuxtLink to="/escrivaninha">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Escrivaninha</h2>
               </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
