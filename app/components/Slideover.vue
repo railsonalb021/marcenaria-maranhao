@@ -47,6 +47,13 @@ watch(() => route.fullPath, () => {
             </ul>
           </NuxtLink>
 
+          <NuxtLink to="/armariosdespensa">
+            <ul class="pl-7 flex text-gray-500 text-xl">
+                <li class="pb-2 hover:text-black ease-out transition-all duration-300 cursor-pointer">Armários de despensa</li>
+                <Icon name="i-lucide-chevron-right" class="inline-block ml-2 mt-1" />
+            </ul>
+          </NuxtLink>
+
           <div class="flex items-center">
             <NuxtLink to="/portas">
               <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Portas</h2>
@@ -92,6 +99,20 @@ watch(() => route.fullPath, () => {
           <div class="flex items-center">
             <NuxtLink to="/escrivaninha">
               <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Escrivaninha</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
+            <NuxtLink to="/pisoslaminados">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Pisos Laminados</h2>
+              </NuxtLink>
+            <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
+          </div>
+
+          <div class="flex items-center">
+            <NuxtLink to="/cadeirasebancos">
+              <h2 class="pt-5 pl-3 text-2xl pb-2 text-black hover:text-gray-500 duration-300 transition-all">Cadeiras e Bancos</h2>
               </NuxtLink>
             <Icon name="i-lucide-chevron-right" class="ml-2 mt-3 text-black" />
           </div>
