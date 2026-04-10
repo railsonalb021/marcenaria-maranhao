@@ -70,7 +70,7 @@ function closeImage() {
     <UPagination 
       class="cursor-pointer"
       active-color="neutral"
-      :total="100"
+      :total="50"
       v-model:page="page"
       :page-count="perPage"
       :max="5" 
